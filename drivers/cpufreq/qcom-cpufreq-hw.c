@@ -28,6 +28,23 @@
 
 #define HZ_PER_KHZ			1000
 
+#define CYCLE_CNTR_OFFSET(core_id, m, acc_count)		\
+				(acc_count ? ((core_id + 1) * 4) : 0)
+
+/* MI-PERF: add sys node for cpu LMH disable
+ * We can disable CPU LMH for performance or benchmark mode,
+ * And avoid sched magraion with thermal weight of EAS,
+*/
+#define DISABLE_FREQ_LM 1
+
+struct cpufreq_counter {
+	u64 total_cycle_counter;
+	u32 prev_cycle_counter;
+	spinlock_t lock;
+};
+
+static struct cpufreq_counter qcom_cpufreq_counter[NR_CPUS];
+
 struct qcom_cpufreq_soc_data {
 	u32 reg_enable;
 	u32 reg_domain_state;
@@ -53,6 +70,14 @@ struct qcom_cpufreq_data {
 	bool cancel_throttle;
 	struct delayed_work throttle_work;
 	struct cpufreq_policy *policy;
+	unsigned long last_non_boost_freq;
+
+	unsigned long dcvsh_freq_limit;
+	struct device_attribute freq_limit_attr;
+#if DISABLE_FREQ_LM
+	unsigned long disable_dcvsh_freq_limit;
+	struct device_attribute disable_limit_attr;
+#endif
 };
 
 static unsigned long cpu_hw_rate, xo_rate;
@@ -283,6 +308,31 @@ static unsigned long qcom_lmh_get_throttle_freq(struct qcom_cpufreq_data *data)
 	return lval * xo_rate;
 }
 
+#if DISABLE_FREQ_LM
+static ssize_t disable_limit_show(struct device *dev, struct device_attribute *attr, char *buf)
+{
+	struct qcom_cpufreq_data *c = container_of(attr, struct qcom_cpufreq_data, disable_limit_attr);
+	return scnprintf(buf, PAGE_SIZE, "%lu\n", c->disable_dcvsh_freq_limit);
+}
+
+static long disable_limit_store(struct device *dev,
+                struct device_attribute *attr, const char *buf, unsigned long count)
+{
+
+	long ret =0;
+
+	struct qcom_cpufreq_data *c = container_of(attr, struct qcom_cpufreq_data, disable_limit_attr);
+
+	ret = sscanf(buf, "%d", &c->disable_dcvsh_freq_limit);
+
+	if (ret == 0) {
+		ret = -EINVAL;
+		return ret;
+	 }
+	return count;
+}
+#endif
+
 static void qcom_lmh_dcvs_notify(struct qcom_cpufreq_data *data)
 {
 	unsigned long max_capacity, capacity, freq_hz, throttled_freq;
@@ -327,7 +377,15 @@ static void qcom_lmh_dcvs_notify(struct qcom_cpufreq_data *data)
 	 * If h/w throttled frequency is higher than what cpufreq has requested
 	 * for, then stop polling and switch back to interrupt mechanism.
 	 */
-	if (throttled_freq >= qcom_cpufreq_hw_get(cpu))
+#if DISABLE_FREQ_LM
+       	if ((throttled_freq >= qcom_cpufreq_hw_get(cpu)) ||  (data->disable_dcvsh_freq_limit ==1)) {
+#else
+	if (throttled_freq >= qcom_cpufreq_hw_get(cpu)) {
+#endif
+		val = readl_relaxed(data->base + soc_data->reg_intr_clear);
+		val |= BIT(soc_data->throttle_irq_bit);
+		writel_relaxed(val, data->base + soc_data->reg_intr_clear);
+
 		enable_irq(data->throttle_irq);
 	else
 		mod_delayed_work(system_highpri_wq, &data->throttle_work,
@@ -415,6 +473,24 @@ static int qcom_cpufreq_hw_lmh_init(struct cpufreq_policy *policy, int index)
 		return 0;
 	}
 
+	data->is_irq_requested = true;
+
+	sysfs_attr_init(&data->freq_limit_attr.attr);
+	data->freq_limit_attr.attr.name = "dcvsh_freq_limit";
+	data->freq_limit_attr.show = dcvsh_freq_limit_show;
+	data->freq_limit_attr.attr.mode = 0444;
+	data->dcvsh_freq_limit = U32_MAX;
+	device_create_file(cpu_dev, &data->freq_limit_attr);
+
+#if DISABLE_FREQ_LM
+                sysfs_attr_init(&data->disable_limit_attr.attr);
+                data->disable_limit_attr.attr.name = "disable_limit";
+                data->disable_limit_attr.show = disable_limit_show;
+                data->disable_limit_attr.store = disable_limit_store;
+                data->disable_limit_attr.attr.mode = 0666;
+                data->disable_dcvsh_freq_limit = 0;
+                device_create_file(cpu_dev, &data->disable_limit_attr);
+#endif
 	return 0;
 }
 

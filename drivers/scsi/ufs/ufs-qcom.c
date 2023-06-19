@@ -12,6 +12,9 @@
 #include <linux/reset-controller.h>
 #include <linux/devfreq.h>
 
+
+#define CREATE_TRACE_POINTS
+#include "ufs-qcom-trace.h"
 #include "ufshcd.h"
 #include "ufshcd-pltfrm.h"
 #include "unipro.h"

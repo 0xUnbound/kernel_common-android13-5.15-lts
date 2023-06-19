@@ -11,16 +11,16 @@
 #include <linux/qcom_scm.h>
 #include <linux/arm-smccc.h>
 #include <linux/dma-mapping.h>
+#include <linux/qtee_shmbridge.h>
+#include <linux/qcom_scm_hab.h>
+#include <linux/wait.h>
 
 #include "qcom_scm.h"
 
-/**
- * struct arm_smccc_args
- * @args:	The array of values used in registers in smc instruction
- */
-struct arm_smccc_args {
-	unsigned long args[8];
-};
+static bool hab_calling_convention;
+//Mi-Security Add
+DECLARE_WAIT_QUEUE_HEAD(tzdbg_log_wq);
+EXPORT_SYMBOL(tzdbg_log_wq);
 
 static DEFINE_MUTEX(qcom_scm_lock);
 
@@ -148,6 +148,23 @@ int __scm_smc_call(struct device *dev, const struct qcom_scm_desc *desc,
 		res->result[2] = smc_res.a3;
 	}
 
-	return (long)smc_res.a0 ? qcom_scm_remap_error(smc_res.a0) : 0;
+	ret = (long)smc_res.a0 ? qcom_scm_remap_error(smc_res.a0) : 0;
+	wake_up_interruptible(&tzdbg_log_wq);
+	return ret;
+}
+
+void __qcom_scm_init(void)
+{
+	int ret;
+	/**
+	 * The HAB connection should be opened before first SMC call.
+	 * If not, there could be errors that might cause the
+	 * system to crash.
+	 */
+	ret = scm_qcpe_hab_open();
+	if (ret != -EOPNOTSUPP) {
+		hab_calling_convention = true;
+		pr_debug("using HAB channel communication ret = %d\n", ret);
+	}
 
 }

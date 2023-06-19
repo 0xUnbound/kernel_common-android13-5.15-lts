@@ -872,6 +872,40 @@ config LEDS_ACER_A500
 	  This option enables support for the Power Button LED of
 	  Acer Iconia Tab A500.
 
+config LEDS_QTI_TRI_LED
+	tristate "LED support for Qualcomm Technologies, Inc. TRI_LED"
+	depends on LEDS_CLASS && MFD_SPMI_PMIC && PWM && OF
+	help
+	  This driver supports the TRI_LED module found in Qualcomm
+	  Technologies, Inc. PMIC chips. TRI_LED supports 3 LED drivers
+	  at max and each is controlled by a PWM channel used for dimming
+	  or blinking.
+
+	  To compile this driver as a module, choose M here: the module
+	  will be called leds-qti-tri-led.
+
+config LEDS_QPNP_VIBRATOR_LDO
+	tristate "Vibrator-LDO support for QPNP PMIC"
+	depends on LEDS_CLASS && MFD_SPMI_PMIC
+	help
+	  This option enables device driver support for the vibrator-ldo
+	  peripheral found on Qualcomm Technologies, Inc. QPNP PMICs.
+	  The vibrator-ldo peripheral is capable of driving ERM vibrators.
+
+	  To compile this driver as a module, choose M here: the module
+	  will be called leds-qpnp-vibrator-ldo.
+
+config LEDS_QPNP_VIBRATOR_LDO_TZ
+	tristate "Vibrator-LDO-TZ support for QPNP PMIC"
+	depends on LEDS_CLASS && MFD_SPMI_PMIC
+	help
+	  This option enables device driver support for the vibrator-ldo-tz
+	  peripheral found on Qualcomm Technologies, Inc. QPNP PMICs.
+	  The vibrator-ldo-tz peripheral is capable of driving ERM vibrators.
+
+	  To compile this driver as a module, choose M here: the module
+	  will be called leds-qpnp-vibrator-ldo-tz.
+
 source "drivers/leds/blink/Kconfig"
 
 comment "Flash and Torch LED drivers"

@@ -13,6 +13,24 @@
 #define QCOM_SCM_CPU_PWR_DOWN_L2_ON	0x0
 #define QCOM_SCM_CPU_PWR_DOWN_L2_OFF	0x1
 #define QCOM_SCM_HDCP_MAX_REQ_CNT	5
+#define QCOM_SCM_CAMERA_MAX_QOS_CNT	2
+
+struct qcom_scm_camera_qos {
+	u32 offset;
+	u32 val;
+};
+
+enum qcom_download_mode {
+	QCOM_DOWNLOAD_NODUMP    = 0x00,
+	QCOM_DOWNLOAD_EDL       = 0x01,
+	QCOM_DOWNLOAD_FULLDUMP  = 0x10,
+#if IS_ENABLED(CONFIG_LAST_LOG_MINIDUMP)
+	QCOM_DOWNLOAD_MINIDUMP  = 0x40,
+#else
+    QCOM_DOWNLOAD_MINIDUMP  = 0x20,
+#endif
+
+};
 
 struct qcom_scm_hdcp_req {
 	u32 addr;
