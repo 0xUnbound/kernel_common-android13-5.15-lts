@@ -339,6 +339,16 @@ static const struct file_operations cmd_db_debugfs_ops = {
 	.release = single_release,
 };
 
+bool cmd_db_is_standalone(void)
+{
+	int ret = cmd_db_ready();
+	u32 standalone = le32_to_cpu(cmd_db_header->reserved) &
+			 CMD_DB_STANDALONE_MASK;
+
+	return !ret && standalone;
+}
+EXPORT_SYMBOL(cmd_db_is_standalone);
+
 static int cmd_db_dev_probe(struct platform_device *pdev)
 {
 	struct reserved_mem *rmem;
@@ -364,6 +374,9 @@ static int cmd_db_dev_probe(struct platform_device *pdev)
 	}
 
 	debugfs_create_file("cmd-db", 0400, NULL, NULL, &cmd_db_debugfs_ops);
+
+	if (cmd_db_is_standalone())
+		pr_info("Command DB is initialized in standalone mode\n");
 
 	return 0;
 }

@@ -1,0 +1,416 @@
+Auto-merging BUILD.bazel
+CONFLICT (modify/delete): android/ACK_SHA deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of android/ACK_SHA left in tree.
+Auto-merging android/abi_gki_aarch64.xml
+CONFLICT (content): Merge conflict in android/abi_gki_aarch64.xml
+Auto-merging android/abi_gki_aarch64_amlogic
+CONFLICT (content): Merge conflict in android/abi_gki_aarch64_amlogic
+Auto-merging android/abi_gki_aarch64_arcvm
+CONFLICT (add/add): Merge conflict in android/abi_gki_aarch64_arcvm
+Auto-merging android/abi_gki_aarch64_honor
+CONFLICT (content): Merge conflict in android/abi_gki_aarch64_honor
+Auto-merging android/abi_gki_aarch64_oplus
+Auto-merging android/abi_gki_aarch64_qcom
+CONFLICT (content): Merge conflict in android/abi_gki_aarch64_qcom
+Auto-merging arch/arm64/Kconfig.platforms
+CONFLICT (content): Merge conflict in arch/arm64/Kconfig.platforms
+CONFLICT (modify/delete): arch/arm64/configs/generic_iot_defconfig deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/generic_iot_defconfig left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/generic_robotics_defconfig deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/generic_robotics_defconfig left in tree.
+Auto-merging arch/arm64/configs/gki_defconfig
+CONFLICT (modify/delete): arch/arm64/configs/kalama_le_gki.fragment deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/kalama_le_gki.fragment left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/autoghgvm.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/autoghgvm.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/autogvm.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/autogvm.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/autogvm_GKI.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/autogvm_GKI.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/bengal_GKI.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/bengal_GKI.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/bengal_consolidate.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/bengal_consolidate.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/gen3auto.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/gen3auto.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/gen3auto_GKI.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/gen3auto_GKI.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/gen3auto_consolidate.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/gen3auto_consolidate.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/gen4auto.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/gen4auto.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/gen4auto_GKI.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/gen4auto_GKI.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/kalama_GKI.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/kalama_GKI.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/kalama_le_GKI.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/kalama_le_GKI.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/kalama_le_consolidate.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/kalama_le_consolidate.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/kalama_tuivm.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/kalama_tuivm.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/kona_GKI.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/kona_GKI.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/kona_le_GKI.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/kona_le_GKI.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/kona_le_consolidate.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/kona_le_consolidate.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/qcs405.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/qcs405.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/qcs405_debug.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/qcs405_debug.config left in tree.
+CONFLICT (modify/delete): arch/arm64/configs/vendor/trinket_GKI.config deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/configs/vendor/trinket_GKI.config left in tree.
+CONFLICT (modify/delete): arch/arm64/gunyah/irq.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of arch/arm64/gunyah/irq.c left in tree.
+Auto-merging arch/x86/configs/gki_defconfig
+Auto-merging block/blk-mq.c
+Auto-merging build.config.gki.aarch64
+CONFLICT (modify/delete): build.config.msm.autogvm deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of build.config.msm.autogvm left in tree.
+CONFLICT (modify/delete): build.config.msm.gen3auto deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of build.config.msm.gen3auto left in tree.
+CONFLICT (modify/delete): build.config.msm.gen4auto deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of build.config.msm.gen4auto left in tree.
+CONFLICT (modify/delete): build.config.msm.kalama deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of build.config.msm.kalama left in tree.
+CONFLICT (modify/delete): build.targets deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of build.targets left in tree.
+Auto-merging drivers/android/binder.c
+Auto-merging drivers/android/vendor_hooks.c
+CONFLICT (modify/delete): drivers/bus/mhi/controllers/mhi_qcom.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/bus/mhi/controllers/mhi_qcom.c left in tree.
+Auto-merging drivers/bus/mhi/host/boot.c
+CONFLICT (content): Merge conflict in drivers/bus/mhi/host/boot.c
+Auto-merging drivers/bus/mhi/host/init.c
+CONFLICT (content): Merge conflict in drivers/bus/mhi/host/init.c
+Auto-merging drivers/bus/mhi/host/internal.h
+CONFLICT (modify/delete): drivers/char/adsprpc.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/char/adsprpc.c left in tree.
+CONFLICT (modify/delete): drivers/char/adsprpc_compat.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/char/adsprpc_compat.c left in tree.
+CONFLICT (modify/delete): drivers/char/adsprpc_shared.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/char/adsprpc_shared.h left in tree.
+CONFLICT (modify/delete): drivers/char/virtio_fastrpc/virtio_fastrpc_base.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/char/virtio_fastrpc/virtio_fastrpc_base.c left in tree.
+CONFLICT (modify/delete): drivers/char/virtio_fastrpc/virtio_fastrpc_base.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/char/virtio_fastrpc/virtio_fastrpc_base.h left in tree.
+CONFLICT (modify/delete): drivers/char/virtio_fastrpc/virtio_fastrpc_core.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/char/virtio_fastrpc/virtio_fastrpc_core.c left in tree.
+CONFLICT (modify/delete): drivers/char/virtio_fastrpc/virtio_fastrpc_core.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/char/virtio_fastrpc/virtio_fastrpc_core.h left in tree.
+Auto-merging drivers/clk/qcom/Kconfig
+Auto-merging drivers/clk/qcom/Makefile
+CONFLICT (content): Merge conflict in drivers/clk/qcom/Makefile
+CONFLICT (modify/delete): drivers/clk/qcom/camcc-lemans.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/clk/qcom/camcc-lemans.c left in tree.
+Auto-merging drivers/clk/qcom/clk-alpha-pll.c
+CONFLICT (content): Merge conflict in drivers/clk/qcom/clk-alpha-pll.c
+Auto-merging drivers/clk/qcom/clk-alpha-pll.h
+CONFLICT (content): Merge conflict in drivers/clk/qcom/clk-alpha-pll.h
+CONFLICT (modify/delete): drivers/clk/qcom/clk-cpu-sdxlemur.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/clk/qcom/clk-cpu-sdxlemur.c left in tree.
+CONFLICT (modify/delete): drivers/clk/qcom/clk-pm.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/clk/qcom/clk-pm.c left in tree.
+Auto-merging drivers/clk/qcom/clk-rpmh.c
+CONFLICT (content): Merge conflict in drivers/clk/qcom/clk-rpmh.c
+Auto-merging drivers/clk/qcom/clk-smd-rpm.c
+CONFLICT (content): Merge conflict in drivers/clk/qcom/clk-smd-rpm.c
+CONFLICT (modify/delete): drivers/clk/qcom/debugcc-lemans.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/clk/qcom/debugcc-lemans.c left in tree.
+CONFLICT (modify/delete): drivers/clk/qcom/debugcc-trinket.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/clk/qcom/debugcc-trinket.c left in tree.
+Auto-merging drivers/clk/qcom/dispcc-sdm845.c
+Auto-merging drivers/clk/qcom/dispcc-sm8250.c
+CONFLICT (content): Merge conflict in drivers/clk/qcom/dispcc-sm8250.c
+CONFLICT (modify/delete): drivers/clk/qcom/dispcc0-lemans.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/clk/qcom/dispcc0-lemans.c left in tree.
+CONFLICT (modify/delete): drivers/clk/qcom/dispcc1-lemans.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/clk/qcom/dispcc1-lemans.c left in tree.
+CONFLICT (modify/delete): drivers/clk/qcom/gcc-lemans.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/clk/qcom/gcc-lemans.c left in tree.
+Auto-merging drivers/clk/qcom/gcc-qcs404.c
+CONFLICT (content): Merge conflict in drivers/clk/qcom/gcc-qcs404.c
+Auto-merging drivers/clk/qcom/gcc-sdm845.c
+CONFLICT (content): Merge conflict in drivers/clk/qcom/gcc-sdm845.c
+Auto-merging drivers/clk/qcom/gcc-sm8150.c
+CONFLICT (content): Merge conflict in drivers/clk/qcom/gcc-sm8150.c
+Auto-merging drivers/clk/qcom/gcc-sm8250.c
+CONFLICT (content): Merge conflict in drivers/clk/qcom/gcc-sm8250.c
+CONFLICT (modify/delete): drivers/clk/qcom/gdsc-regulator.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/clk/qcom/gdsc-regulator.c left in tree.
+CONFLICT (modify/delete): drivers/clk/qcom/gpucc-crow.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/clk/qcom/gpucc-crow.c left in tree.
+CONFLICT (modify/delete): drivers/clk/qcom/gpucc-khaje.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/clk/qcom/gpucc-khaje.c left in tree.
+CONFLICT (modify/delete): drivers/clk/qcom/gpucc-lemans.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/clk/qcom/gpucc-lemans.c left in tree.
+Auto-merging drivers/clk/qcom/gpucc-sdm845.c
+CONFLICT (content): Merge conflict in drivers/clk/qcom/gpucc-sdm845.c
+Auto-merging drivers/clk/qcom/gpucc-sm8150.c
+CONFLICT (content): Merge conflict in drivers/clk/qcom/gpucc-sm8150.c
+CONFLICT (modify/delete): drivers/clk/qcom/npucc-sm8250.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/clk/qcom/npucc-sm8250.c left in tree.
+CONFLICT (modify/delete): drivers/clk/qcom/videocc-kalama.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/clk/qcom/videocc-kalama.c left in tree.
+CONFLICT (modify/delete): drivers/clk/qcom/videocc-lemans.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/clk/qcom/videocc-lemans.c left in tree.
+Auto-merging drivers/clk/qcom/videocc-sm8150.c
+CONFLICT (content): Merge conflict in drivers/clk/qcom/videocc-sm8150.c
+CONFLICT (modify/delete): drivers/dma/qcom/msm_gpi.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/dma/qcom/msm_gpi.c left in tree.
+Auto-merging drivers/firmware/qcom_scm.c
+CONFLICT (content): Merge conflict in drivers/firmware/qcom_scm.c
+Auto-merging drivers/firmware/qcom_scm.h
+CONFLICT (content): Merge conflict in drivers/firmware/qcom_scm.h
+CONFLICT (modify/delete): drivers/firmware/qcom_scm_hab.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/firmware/qcom_scm_hab.c left in tree.
+Auto-merging drivers/gpu/drm/bridge/analogix/anx7625.c
+CONFLICT (content): Merge conflict in drivers/gpu/drm/bridge/analogix/anx7625.c
+CONFLICT (modify/delete): drivers/hwtracing/coresight/coresight-tmc-pcie.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/hwtracing/coresight/coresight-tmc-pcie.c left in tree.
+CONFLICT (modify/delete): drivers/hwtracing/coresight/coresight-tmc-pcie.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/hwtracing/coresight/coresight-tmc-pcie.h left in tree.
+CONFLICT (modify/delete): drivers/hwtracing/coresight/coresight-tmc-usb.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/hwtracing/coresight/coresight-tmc-usb.c left in tree.
+CONFLICT (modify/delete): drivers/i2c/busses/i2c-msm-geni.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/i2c/busses/i2c-msm-geni.c left in tree.
+CONFLICT (modify/delete): drivers/i2c/busses/i2c-msm-v2.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/i2c/busses/i2c-msm-v2.c left in tree.
+Auto-merging drivers/iio/adc/Kconfig
+Auto-merging drivers/iio/adc/Makefile
+CONFLICT (content): Merge conflict in drivers/iio/adc/Makefile
+CONFLICT (modify/delete): drivers/iio/adc/qcom-spmi-adc5-gen3.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/iio/adc/qcom-spmi-adc5-gen3.c left in tree.
+CONFLICT (modify/delete): drivers/iio/proximity/inv_ch101/ch101_i2c.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/iio/proximity/inv_ch101/ch101_i2c.c left in tree.
+CONFLICT (modify/delete): drivers/input/misc/qcom-hv-haptics.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/input/misc/qcom-hv-haptics.c left in tree.
+Auto-merging drivers/interconnect/qcom/Kconfig
+Auto-merging drivers/interconnect/qcom/Makefile
+CONFLICT (content): Merge conflict in drivers/interconnect/qcom/Makefile
+CONFLICT (modify/delete): drivers/interconnect/qcom/lemans.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/interconnect/qcom/lemans.c left in tree.
+Auto-merging drivers/iommu/Kconfig
+CONFLICT (content): Merge conflict in drivers/iommu/Kconfig
+CONFLICT (modify/delete): drivers/iommu/arm/arm-smmu-v3/virt-arm-smmu-v3.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/iommu/arm/arm-smmu-v3/virt-arm-smmu-v3.c left in tree.
+CONFLICT (modify/delete): drivers/iommu/arm/arm-smmu/arm-smmu-debug.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/iommu/arm/arm-smmu/arm-smmu-debug.h left in tree.
+Auto-merging drivers/iommu/arm/arm-smmu/arm-smmu-impl.c
+CONFLICT (content): Merge conflict in drivers/iommu/arm/arm-smmu/arm-smmu-impl.c
+Auto-merging drivers/iommu/arm/arm-smmu/arm-smmu-qcom.c
+CONFLICT (content): Merge conflict in drivers/iommu/arm/arm-smmu/arm-smmu-qcom.c
+Auto-merging drivers/iommu/arm/arm-smmu/arm-smmu.c
+CONFLICT (content): Merge conflict in drivers/iommu/arm/arm-smmu/arm-smmu.c
+Auto-merging drivers/iommu/arm/arm-smmu/arm-smmu.h
+CONFLICT (content): Merge conflict in drivers/iommu/arm/arm-smmu/arm-smmu.h
+CONFLICT (modify/delete): drivers/iommu/dma-mapping-fast.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/iommu/dma-mapping-fast.c left in tree.
+CONFLICT (modify/delete): drivers/iommu/qcom-iommu-util.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/iommu/qcom-iommu-util.c left in tree.
+CONFLICT (modify/delete): drivers/irqchip/qcom-mpm.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/irqchip/qcom-mpm.c left in tree.
+CONFLICT (modify/delete): drivers/mailbox/msm_qmp.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/mailbox/msm_qmp.c left in tree.
+Auto-merging drivers/md/dm-crypt.c
+Auto-merging drivers/md/dm-integrity.c
+Auto-merging drivers/md/dm-raid1.c
+Auto-merging drivers/md/dm-verity-fec.c
+CONFLICT (modify/delete): drivers/media/platform/msm/Kconfig deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/media/platform/msm/Kconfig left in tree.
+CONFLICT (modify/delete): drivers/media/platform/msm/Makefile deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/media/platform/msm/Makefile left in tree.
+CONFLICT (modify/delete): drivers/media/platform/msm/npu/npu_common.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/media/platform/msm/npu/npu_common.h left in tree.
+CONFLICT (modify/delete): drivers/media/platform/msm/npu/npu_debugfs.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/media/platform/msm/npu/npu_debugfs.c left in tree.
+CONFLICT (modify/delete): drivers/media/platform/msm/npu/npu_host_ipc.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/media/platform/msm/npu/npu_host_ipc.c left in tree.
+CONFLICT (modify/delete): drivers/media/platform/msm/npu/npu_hw_access.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/media/platform/msm/npu/npu_hw_access.c left in tree.
+CONFLICT (modify/delete): drivers/media/platform/msm/npu/npu_hw_access.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/media/platform/msm/npu/npu_hw_access.h left in tree.
+CONFLICT (modify/delete): drivers/media/platform/msm/npu/npu_mgr.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/media/platform/msm/npu/npu_mgr.c left in tree.
+CONFLICT (modify/delete): drivers/media/platform/msm/synx/synx.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/media/platform/msm/synx/synx.c left in tree.
+Auto-merging drivers/media/platform/qcom/venus/hfi_parser.c
+CONFLICT (content): Merge conflict in drivers/media/platform/qcom/venus/hfi_parser.c
+CONFLICT (modify/delete): drivers/misc/profiler.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/misc/profiler.c left in tree.
+CONFLICT (modify/delete): drivers/misc/qrc/qrc_core.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/misc/qrc/qrc_core.c left in tree.
+CONFLICT (modify/delete): drivers/mmc/host/cqhci-crypto-qti.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/mmc/host/cqhci-crypto-qti.c left in tree.
+CONFLICT (modify/delete): drivers/mmc/host/sdhci-msm-scaling.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/mmc/host/sdhci-msm-scaling.c left in tree.
+Auto-merging drivers/mmc/host/sdhci-msm.c
+CONFLICT (content): Merge conflict in drivers/mmc/host/sdhci-msm.c
+CONFLICT (modify/delete): drivers/mtd/devices/msm_qpic_nand.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/mtd/devices/msm_qpic_nand.c left in tree.
+CONFLICT (modify/delete): drivers/net/can/spi/qti-can.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/net/can/spi/qti-can.c left in tree.
+Auto-merging drivers/net/ethernet/stmicro/stmmac/Kconfig
+Auto-merging drivers/net/ethernet/stmicro/stmmac/dwmac-qcom-ethqos.c
+CONFLICT (content): Merge conflict in drivers/net/ethernet/stmicro/stmmac/dwmac-qcom-ethqos.c
+CONFLICT (modify/delete): drivers/net/ethernet/stmicro/stmmac/dwmac-qcom-serdes.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/net/ethernet/stmicro/stmmac/dwmac-qcom-serdes.c left in tree.
+Auto-merging drivers/net/ethernet/stmicro/stmmac/dwxgmac2.h
+Auto-merging drivers/net/ethernet/stmicro/stmmac/dwxgmac2_core.c
+Auto-merging drivers/net/ethernet/stmicro/stmmac/stmmac.h
+Auto-merging drivers/net/ethernet/stmicro/stmmac/stmmac_ethtool.c
+CONFLICT (content): Merge conflict in drivers/net/ethernet/stmicro/stmmac/stmmac_ethtool.c
+Auto-merging drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+CONFLICT (content): Merge conflict in drivers/net/ethernet/stmicro/stmmac/stmmac_main.c
+Auto-merging drivers/net/usb/ax88179_178a.c
+CONFLICT (content): Merge conflict in drivers/net/usb/ax88179_178a.c
+CONFLICT (modify/delete): drivers/pci/controller/pci-msm.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/pci/controller/pci-msm.c left in tree.
+Auto-merging drivers/phy/qualcomm/Kconfig
+CONFLICT (content): Merge conflict in drivers/phy/qualcomm/Kconfig
+Auto-merging drivers/phy/qualcomm/Makefile
+CONFLICT (content): Merge conflict in drivers/phy/qualcomm/Makefile
+CONFLICT (modify/delete): drivers/phy/qualcomm/phy-qcom-ufs-qmp-v4-waipio.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/phy/qualcomm/phy-qcom-ufs-qmp-v4-waipio.h left in tree.
+Auto-merging drivers/pinctrl/qcom/Kconfig
+CONFLICT (content): Merge conflict in drivers/pinctrl/qcom/Kconfig
+Auto-merging drivers/pinctrl/qcom/Makefile
+CONFLICT (content): Merge conflict in drivers/pinctrl/qcom/Makefile
+CONFLICT (modify/delete): drivers/pinctrl/qcom/pinctrl-bengal.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/pinctrl/qcom/pinctrl-bengal.c left in tree.
+CONFLICT (modify/delete): drivers/pinctrl/qcom/pinctrl-direwolf.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/pinctrl/qcom/pinctrl-direwolf.c left in tree.
+CONFLICT (modify/delete): drivers/pinctrl/qcom/pinctrl-lemans.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/pinctrl/qcom/pinctrl-lemans.c left in tree.
+Auto-merging drivers/pinctrl/qcom/pinctrl-msm.c
+CONFLICT (content): Merge conflict in drivers/pinctrl/qcom/pinctrl-msm.c
+Auto-merging drivers/pinctrl/qcom/pinctrl-spmi-gpio.c
+CONFLICT (content): Merge conflict in drivers/pinctrl/qcom/pinctrl-spmi-gpio.c
+CONFLICT (modify/delete): drivers/platform/msm/ep_pcie/ep_pcie_com.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/platform/msm/ep_pcie/ep_pcie_com.h left in tree.
+CONFLICT (modify/delete): drivers/platform/msm/ep_pcie/ep_pcie_core.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/platform/msm/ep_pcie/ep_pcie_core.c left in tree.
+CONFLICT (modify/delete): drivers/platform/msm/ep_pcie/ep_pcie_dbg.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/platform/msm/ep_pcie/ep_pcie_dbg.c left in tree.
+CONFLICT (modify/delete): drivers/platform/msm/ep_pcie/ep_pcie_phy.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/platform/msm/ep_pcie/ep_pcie_phy.c left in tree.
+CONFLICT (modify/delete): drivers/platform/msm/mhi_dev/mhi.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/platform/msm/mhi_dev/mhi.c left in tree.
+CONFLICT (modify/delete): drivers/platform/msm/mhi_dev/mhi_dev_net.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/platform/msm/mhi_dev/mhi_dev_net.c left in tree.
+CONFLICT (modify/delete): drivers/platform/msm/mhi_dev/mhi_sm.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/platform/msm/mhi_dev/mhi_sm.c left in tree.
+CONFLICT (modify/delete): drivers/platform/msm/mhi_dev/mhi_uci.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/platform/msm/mhi_dev/mhi_uci.c left in tree.
+Auto-merging drivers/power/reset/reboot-mode.c
+CONFLICT (content): Merge conflict in drivers/power/reset/reboot-mode.c
+CONFLICT (modify/delete): drivers/power/supply/qcom/Kconfig deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/power/supply/qcom/Kconfig left in tree.
+CONFLICT (modify/delete): drivers/power/supply/qcom/Makefile deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/power/supply/qcom/Makefile left in tree.
+CONFLICT (modify/delete): drivers/power/supply/qcom/pmic-voter.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/power/supply/qcom/pmic-voter.c left in tree.
+CONFLICT (modify/delete): drivers/power/supply/qcom/qti-qbg.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/power/supply/qcom/qti-qbg.c left in tree.
+CONFLICT (modify/delete): drivers/power/supply/qcom/smb23x-charger.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/power/supply/qcom/smb23x-charger.c left in tree.
+CONFLICT (modify/delete): drivers/regulator/rpmh-regulator.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/regulator/rpmh-regulator.c left in tree.
+Auto-merging drivers/remoteproc/Kconfig
+CONFLICT (content): Merge conflict in drivers/remoteproc/Kconfig
+Auto-merging drivers/remoteproc/qcom_common.h
+CONFLICT (content): Merge conflict in drivers/remoteproc/qcom_common.h
+Auto-merging drivers/remoteproc/qcom_q6v5.c
+CONFLICT (content): Merge conflict in drivers/remoteproc/qcom_q6v5.c
+Auto-merging drivers/remoteproc/qcom_q6v5_mss.c
+CONFLICT (content): Merge conflict in drivers/remoteproc/qcom_q6v5_mss.c
+Auto-merging drivers/remoteproc/qcom_q6v5_pas.c
+CONFLICT (content): Merge conflict in drivers/remoteproc/qcom_q6v5_pas.c
+CONFLICT (modify/delete): drivers/remoteproc/qcom_rproc_slate.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/remoteproc/qcom_rproc_slate.c left in tree.
+Auto-merging drivers/remoteproc/qcom_sysmon.c
+Auto-merging drivers/rpmsg/qcom_glink_native.c
+CONFLICT (content): Merge conflict in drivers/rpmsg/qcom_glink_native.c
+Auto-merging drivers/rpmsg/qcom_glink_native.h
+CONFLICT (content): Merge conflict in drivers/rpmsg/qcom_glink_native.h
+CONFLICT (modify/delete): drivers/rpmsg/qcom_glink_slatecom.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/rpmsg/qcom_glink_slatecom.c left in tree.
+Auto-merging drivers/rpmsg/qcom_glink_smem.c
+CONFLICT (content): Merge conflict in drivers/rpmsg/qcom_glink_smem.c
+Auto-merging drivers/scsi/ufs/ufs-qcom.c
+CONFLICT (content): Merge conflict in drivers/scsi/ufs/ufs-qcom.c
+CONFLICT (modify/delete): drivers/scsi/ufs/ufshcd-crypto-qti.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/scsi/ufs/ufshcd-crypto-qti.c left in tree.
+Auto-merging drivers/slimbus/messaging.c
+CONFLICT (content): Merge conflict in drivers/slimbus/messaging.c
+Auto-merging drivers/slimbus/qcom-ngd-ctrl.c
+CONFLICT (content): Merge conflict in drivers/slimbus/qcom-ngd-ctrl.c
+Auto-merging drivers/slimbus/stream.c
+CONFLICT (content): Merge conflict in drivers/slimbus/stream.c
+Auto-merging drivers/soc/qcom/Kconfig
+CONFLICT (content): Merge conflict in drivers/soc/qcom/Kconfig
+Auto-merging drivers/soc/qcom/Makefile
+CONFLICT (content): Merge conflict in drivers/soc/qcom/Makefile
+CONFLICT (modify/delete): drivers/soc/qcom/boot_stats.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/boot_stats.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/crypto-qti-common.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/crypto-qti-common.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/crypto-qti-hwkm.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/crypto-qti-hwkm.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/crypto-qti-platform.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/crypto-qti-platform.h left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/crypto-qti-tz.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/crypto-qti-tz.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/crypto-qti-virt.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/crypto-qti-virt.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/dcc_v2.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/dcc_v2.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/dcvs/c1dcvs_scmi.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/dcvs/c1dcvs_scmi.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/dcvs/dcvs.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/dcvs/dcvs.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/dcvs/dcvs_epss.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/dcvs/dcvs_epss.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/dump_boot_log.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/dump_boot_log.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hab/ghs_comm.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hab/ghs_comm.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hab/hab.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hab/hab.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hab/hab.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hab/hab.h left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hab/hab_comm.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hab/hab_comm.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hab/hab_linux.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hab/hab_linux.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hab/hab_mem_linux.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hab/hab_mem_linux.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hab/hab_mimex.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hab/hab_mimex.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hab/hab_msg.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hab/hab_msg.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hab/hab_open.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hab/hab_open.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hab/hab_os.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hab/hab_os.h left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hab/hab_qvm_linux.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hab/hab_qvm_linux.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hab/hab_stat.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hab/hab_stat.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hab/hab_trace_os.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hab/hab_trace_os.h left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hab/hab_vhost.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hab/hab_vhost.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hab/hab_virtio.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hab/hab_virtio.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hab/qvm_comm.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hab/qvm_comm.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hgsl/Makefile deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hgsl/Makefile left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hgsl/hgsl.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hgsl/hgsl.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hgsl/hgsl.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hgsl/hgsl.h left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hgsl/hgsl_hyp.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hgsl/hgsl_hyp.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hgsl/hgsl_hyp.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hgsl/hgsl_hyp.h left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hgsl/hgsl_memory.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hgsl/hgsl_memory.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hgsl/hgsl_memory.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hgsl/hgsl_memory.h left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hgsl/hgsl_sync.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hgsl/hgsl_sync.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/hgsl/hgsl_utils.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/hgsl/hgsl_utils.h left in tree.
+Auto-merging drivers/soc/qcom/llcc-qcom.c
+CONFLICT (content): Merge conflict in drivers/soc/qcom/llcc-qcom.c
+CONFLICT (modify/delete): drivers/soc/qcom/mem_buf/mem-buf-ids.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/mem_buf/mem-buf-ids.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/mem_buf/mem-buf-ids.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/mem_buf/mem-buf-ids.h left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/minidump_log.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/minidump_log.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/msm_performance.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/msm_performance.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/pmic-pon-log.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/pmic-pon-log.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/power_state.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/power_state.c left in tree.
+Auto-merging drivers/soc/qcom/qcom_aoss.c
+CONFLICT (content): Merge conflict in drivers/soc/qcom/qcom_aoss.c
+CONFLICT (modify/delete): drivers/soc/qcom/qcom_cpu_vendor_hooks.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/qcom_cpu_vendor_hooks.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/qcom_ipcc.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/qcom_ipcc.c left in tree.
+Auto-merging drivers/soc/qcom/rpmh-internal.h
+CONFLICT (content): Merge conflict in drivers/soc/qcom/rpmh-internal.h
+Auto-merging drivers/soc/qcom/rpmh-rsc.c
+CONFLICT (content): Merge conflict in drivers/soc/qcom/rpmh-rsc.c
+Auto-merging drivers/soc/qcom/rpmh.c
+CONFLICT (content): Merge conflict in drivers/soc/qcom/rpmh.c
+CONFLICT (modify/delete): drivers/soc/qcom/slate_events_bridge.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/slate_events_bridge.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/slatecom_interface.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/slatecom_interface.c left in tree.
+CONFLICT (modify/delete): drivers/soc/qcom/slatecom_spi.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/slatecom_spi.c left in tree.
+Auto-merging drivers/soc/qcom/smem.c
+CONFLICT (content): Merge conflict in drivers/soc/qcom/smem.c
+Auto-merging drivers/soc/qcom/socinfo.c
+CONFLICT (content): Merge conflict in drivers/soc/qcom/socinfo.c
+CONFLICT (modify/delete): drivers/soc/qcom/subsystem_sleep_stats.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/soc/qcom/subsystem_sleep_stats.c left in tree.
+CONFLICT (modify/delete): drivers/spi/spi-msm-geni.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/spi/spi-msm-geni.c left in tree.
+Auto-merging drivers/spmi/spmi-pmic-arb.c
+CONFLICT (content): Merge conflict in drivers/spmi/spmi-pmic-arb.c
+Auto-merging drivers/thermal/qcom/Kconfig
+Auto-merging drivers/thermal/qcom/Makefile
+CONFLICT (modify/delete): drivers/thermal/qcom/max31760_fan.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/thermal/qcom/max31760_fan.c left in tree.
+CONFLICT (modify/delete): drivers/thermal/qcom/qmi_sensors.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/thermal/qcom/qmi_sensors.c left in tree.
+Auto-merging drivers/thermal/qcom/tsens-v2.c
+CONFLICT (content): Merge conflict in drivers/thermal/qcom/tsens-v2.c
+Auto-merging drivers/thermal/qcom/tsens.c
+CONFLICT (content): Merge conflict in drivers/thermal/qcom/tsens.c
+Auto-merging drivers/thermal/qcom/tsens.h
+CONFLICT (content): Merge conflict in drivers/thermal/qcom/tsens.h
+Auto-merging drivers/tty/serial/Kconfig
+CONFLICT (content): Merge conflict in drivers/tty/serial/Kconfig
+CONFLICT (modify/delete): drivers/tty/serial/msm_geni_serial.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/tty/serial/msm_geni_serial.c left in tree.
+CONFLICT (modify/delete): drivers/tty/serial/msm_serial_hs.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/tty/serial/msm_serial_hs.c left in tree.
+CONFLICT (modify/delete): drivers/uio/msm_sharedmem/msm_sharedmem.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/uio/msm_sharedmem/msm_sharedmem.c left in tree.
+CONFLICT (modify/delete): drivers/usb/dwc3/dwc3-msm-core.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/usb/dwc3/dwc3-msm-core.c left in tree.
+CONFLICT (modify/delete): drivers/usb/dwc3/dwc3-msm-ops.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/usb/dwc3/dwc3-msm-ops.c left in tree.
+Auto-merging drivers/usb/gadget/function/f_ncm.c
+Auto-merging drivers/usb/host/xhci-hub.c
+Auto-merging drivers/usb/host/xhci.c
+Auto-merging drivers/usb/phy/Makefile
+CONFLICT (content): Merge conflict in drivers/usb/phy/Makefile
+CONFLICT (modify/delete): drivers/usb/phy/phy-msm-qusb.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/usb/phy/phy-msm-qusb.c left in tree.
+CONFLICT (modify/delete): drivers/usb/phy/phy-msm-snps-eusb2.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/usb/phy/phy-msm-snps-eusb2.c left in tree.
+CONFLICT (modify/delete): drivers/usb/phy/phy-msm-snps-hs.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/usb/phy/phy-msm-snps-hs.c left in tree.
+CONFLICT (modify/delete): drivers/virt/gunyah/gh_main.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/virt/gunyah/gh_main.c left in tree.
+CONFLICT (modify/delete): drivers/virt/gunyah/gh_private.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/virt/gunyah/gh_private.h left in tree.
+CONFLICT (modify/delete): drivers/virt/gunyah/gh_proxy_sched.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/virt/gunyah/gh_proxy_sched.c left in tree.
+CONFLICT (modify/delete): drivers/virt/gunyah/gh_proxy_sched.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/virt/gunyah/gh_proxy_sched.h left in tree.
+CONFLICT (modify/delete): drivers/virt/gunyah/gh_rm_core.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/virt/gunyah/gh_rm_core.c left in tree.
+CONFLICT (modify/delete): drivers/virt/gunyah/gh_secure_vm_loader.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of drivers/virt/gunyah/gh_secure_vm_loader.c left in tree.
+CONFLICT (modify/delete): files_gki_aarch64.txt deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of files_gki_aarch64.txt left in tree.
+Auto-merging fs/proc/task_mmu.c
+CONFLICT (content): Merge conflict in fs/proc/task_mmu.c
+Auto-merging include/dt-bindings/clock/qcom,gcc-sm8250.h
+CONFLICT (content): Merge conflict in include/dt-bindings/clock/qcom,gcc-sm8250.h
+CONFLICT (modify/delete): include/dt-bindings/clock/qcom,gpucc-crow.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/dt-bindings/clock/qcom,gpucc-crow.h left in tree.
+CONFLICT (modify/delete): include/dt-bindings/clock/qcom,npucc-sm8250.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/dt-bindings/clock/qcom,npucc-sm8250.h left in tree.
+CONFLICT (modify/delete): include/dt-bindings/iio/qti_power_supply_iio.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/dt-bindings/iio/qti_power_supply_iio.h left in tree.
+CONFLICT (modify/delete): include/dt-bindings/regulator/qcom,rpmh-regulator-levels.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/dt-bindings/regulator/qcom,rpmh-regulator-levels.h left in tree.
+CONFLICT (modify/delete): include/dt-bindings/soc/qcom,ipcc.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/dt-bindings/soc/qcom,ipcc.h left in tree.
+CONFLICT (modify/delete): include/linux/crypto-qti-common.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/linux/crypto-qti-common.h left in tree.
+CONFLICT (modify/delete): include/linux/gunyah/gh_common.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/linux/gunyah/gh_common.h left in tree.
+CONFLICT (modify/delete): include/linux/habmm.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/linux/habmm.h left in tree.
+Auto-merging include/linux/mhi.h
+CONFLICT (modify/delete): include/linux/mhi_dma.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/linux/mhi_dma.h left in tree.
+CONFLICT (modify/delete): include/linux/msm_gpi.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/linux/msm_gpi.h left in tree.
+CONFLICT (modify/delete): include/linux/msm_mhi_dev.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/linux/msm_mhi_dev.h left in tree.
+CONFLICT (modify/delete): include/linux/msm_pcie.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/linux/msm_pcie.h left in tree.
+Auto-merging include/linux/pgsize_migration.h
+CONFLICT (add/add): Merge conflict in include/linux/pgsize_migration.h
+CONFLICT (modify/delete): include/linux/pmic-voter.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/linux/pmic-voter.h left in tree.
+CONFLICT (modify/delete): include/linux/qcom-iommu-util.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/linux/qcom-iommu-util.h left in tree.
+Auto-merging include/linux/qcom_scm.h
+CONFLICT (content): Merge conflict in include/linux/qcom_scm.h
+Auto-merging include/linux/remoteproc/qcom_rproc.h
+CONFLICT (content): Merge conflict in include/linux/remoteproc/qcom_rproc.h
+CONFLICT (modify/delete): include/linux/soc/qcom/slatecom_interface.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/linux/soc/qcom/slatecom_interface.h left in tree.
+Auto-merging include/net/af_unix.h
+CONFLICT (modify/delete): include/soc/qcom/dcvs.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/soc/qcom/dcvs.h left in tree.
+CONFLICT (modify/delete): include/soc/qcom/profiler.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/soc/qcom/profiler.h left in tree.
+CONFLICT (modify/delete): include/soc/qcom/subsystem_sleep_stats.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/soc/qcom/subsystem_sleep_stats.h left in tree.
+Auto-merging include/trace/hooks/mm.h
+CONFLICT (content): Merge conflict in include/trace/hooks/mm.h
+Auto-merging include/trace/hooks/rwsem.h
+CONFLICT (content): Merge conflict in include/trace/hooks/rwsem.h
+CONFLICT (modify/delete): include/uapi/linux/ipa_qmi_service_v01.h deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of include/uapi/linux/ipa_qmi_service_v01.h left in tree.
+Auto-merging kernel/locking/rwsem.c
+Auto-merging mm/Makefile
+Auto-merging mm/filemap.c
+Auto-merging mm/madvise.c
+Auto-merging mm/memory.c
+Auto-merging mm/mmap.c
+Auto-merging mm/pgsize_migration.c
+CONFLICT (add/add): Merge conflict in mm/pgsize_migration.c
+CONFLICT (modify/delete): modules.list.msm.bengal deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of modules.list.msm.bengal left in tree.
+CONFLICT (modify/delete): modules.list.msm.gen4auto deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of modules.list.msm.gen4auto left in tree.
+CONFLICT (modify/delete): modules.list.msm.trinket deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of modules.list.msm.trinket left in tree.
+CONFLICT (modify/delete): modules.vendor_blocklist.msm.autogvm deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of modules.vendor_blocklist.msm.autogvm left in tree.
+CONFLICT (modify/delete): modules.vendor_blocklist.msm.gen3auto deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of modules.vendor_blocklist.msm.gen3auto left in tree.
+CONFLICT (modify/delete): modules.vendor_blocklist.msm.gen4auto deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of modules.vendor_blocklist.msm.gen4auto left in tree.
+Auto-merging net/ipv4/devinet.c
+Auto-merging net/netfilter/nf_tables_api.c
+Auto-merging net/netfilter/nft_chain_filter.c
+Auto-merging net/netfilter/nft_set_pipapo.c
+CONFLICT (content): Merge conflict in net/netfilter/nft_set_pipapo.c
+Auto-merging net/qrtr/af_qrtr.c
+CONFLICT (content): Merge conflict in net/qrtr/af_qrtr.c
+CONFLICT (modify/delete): net/qrtr/gunyah.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of net/qrtr/gunyah.c left in tree.
+Auto-merging net/qrtr/mhi.c
+CONFLICT (content): Merge conflict in net/qrtr/mhi.c
+Auto-merging net/unix/af_unix.c
+Auto-merging net/unix/garbage.c
+CONFLICT (content): Merge conflict in net/unix/garbage.c
+Auto-merging net/unix/scm.c
+Auto-merging net/wireless/nl80211.c
+Auto-merging net/wireless/util.c
+CONFLICT (modify/delete): sound/usb/usb_audio_qmi_svc.c deleted in HEAD and modified in dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts).  Version dd2483f49bed (Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts) of sound/usb/usb_audio_qmi_svc.c left in tree.
+error: could not apply dd2483f49bed... Merge 'KERNEL.PLATFORM.2.0.r20-02600-kernel.0' into android13-5.15-lts
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".

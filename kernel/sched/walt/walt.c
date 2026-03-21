@@ -5179,7 +5179,10 @@ static void walt_init(struct work_struct *work)
 	}
 
 	topology_clear_scale_freq_source(SCALE_FREQ_SOURCE_ARCH, cpu_online_mask);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 194f5b161ff62acb074e41d64f27708418fbab1d
 }
 
 static DECLARE_WORK(walt_init_work, walt_init);

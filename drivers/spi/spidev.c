@@ -81,7 +81,7 @@ struct spidev_data {
 static LIST_HEAD(device_list);
 static DEFINE_MUTEX(device_list_lock);
 
-static unsigned bufsiz = 4096;
+static unsigned int bufsiz = 35000;
 module_param(bufsiz, uint, S_IRUGO);
 MODULE_PARM_DESC(bufsiz, "data bytes in biggest supported SPI message");
 
@@ -767,11 +767,8 @@ static const struct spi_device_id spidev_spi_ids[] = {
 	{ .name = "m53cpld" },
 	{ .name = "spi-petra" },
 	{ .name = "spi-authenta" },
-<<<<<<< HEAD
 	{ .name = "em3581" },
-=======
 	{ .name = "ir-spi" },
->>>>>>> 546a4b3a795d (treewide: carefully merge vendor changes)
 	{},
 };
 MODULE_DEVICE_TABLE(spi, spidev_spi_ids);

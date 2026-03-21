@@ -26,6 +26,7 @@
 #include <linux/pinctrl/consumer.h>
 #include <linux/gpio/consumer.h>
 #include <linux/gpio.h>
+#include <linux/sched/clock.h>
 #include <linux/slab.h>
 #include <soc/qcom/boot_stats.h>
 

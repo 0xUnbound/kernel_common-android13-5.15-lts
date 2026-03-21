@@ -2,6 +2,7 @@
 /*
  * Copyright (c) 2018-2019, The Linux Foundation. All rights reserved.
  * Copyright (c) 2021, Linaro Ltd.
+ * Copyright (c) 2022, Qualcomm Innovation Center, Inc. All rights reserved.
  */
 
 #ifndef _DT_BINDINGS_CLK_QCOM_GCC_SC8180X_H
@@ -295,6 +296,10 @@
 #define GCC_VIDEO_AXI0_CLK_BCR					42
 #define GCC_VIDEO_AXI1_CLK_BCR					43
 #define GCC_USB3_DP_PHY_SEC_BCR					44
+#define GCC_USB3_UNIPHY_MP0_BCR					45
+#define GCC_USB3_UNIPHY_MP1_BCR					46
+#define GCC_USB3UNIPHY_PHY_MP0_BCR				47
+#define GCC_USB3UNIPHY_PHY_MP1_BCR				48
 
 /* GCC GDSCRs */
 #define EMAC_GDSC						0
