@@ -15,7 +15,7 @@ TC_DIR="prebuilts/clang/host/linux-x86"
 OUT_DIR="out/android13-5.15/dist"
 
 # Repo URL
-ANYKERNEL_REPO="https://github.com/zhantech/Anykernel3.git"
+ANYKERNEL_REPO="https://github.com/SM6225-Android-Playground/AnyKernel3"
 ANYKERNEL_BRANCH="topaz"
 
 # Customize
