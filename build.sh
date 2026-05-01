@@ -20,7 +20,7 @@ ANYKERNEL_BRANCH="topaz"
 
 # Customize
 KERNEL="EcstasyKernel"
-RELEASE_VERSION="V1.0"
+RELEASE_VERSION="V1.2"
 DEVICE="Topaz-Tapas"
 BENGAL_DEVICE="Bengal"
 KERNELNAME="${KERNEL}-${RELEASE_VERSION}-${BRANCH}-${DEVICE}-$(TZ=Asia/Jakarta date +%y%m%d)"
