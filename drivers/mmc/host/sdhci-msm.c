@@ -196,6 +196,7 @@
 
 /* Max number of log pages */
 #define SDHCI_MSM_MAX_LOG_SZ	10
+
 #define sdhci_msm_log_str(host, fmt, ...)	\
 	do {	\
 		if (host->sdhci_msm_ipc_log_ctx && host->dbg_en)	\
@@ -1962,7 +1963,6 @@ static void sdhci_msm_check_power_status(struct sdhci_host *host, u32 req_type)
 {
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct sdhci_msm_host *msm_host = sdhci_pltfm_priv(pltfm_host);
-	struct mmc_host *mmc = host->mmc;
 	bool done = false;
 	u32 val = SWITCHABLE_SIGNALING_VOLTAGE;
 	const struct sdhci_msm_offset *msm_offset =
@@ -5507,6 +5507,7 @@ static __maybe_unused int sdhci_msm_runtime_suspend(struct device *dev)
 	struct sdhci_host *host = dev_get_drvdata(dev);
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct sdhci_msm_host *msm_host = sdhci_pltfm_priv(pltfm_host);
+	struct sdhci_msm_qos_req *qos_req = msm_host->sdhci_qos;
 	unsigned long flags;
 
 	spin_lock_irqsave(&host->lock, flags);
@@ -5530,6 +5531,7 @@ static __maybe_unused int sdhci_msm_runtime_resume(struct device *dev)
 	struct sdhci_host *host = dev_get_drvdata(dev);
 	struct sdhci_pltfm_host *pltfm_host = sdhci_priv(host);
 	struct sdhci_msm_host *msm_host = sdhci_pltfm_priv(pltfm_host);
+	struct sdhci_msm_qos_req *qos_req = msm_host->sdhci_qos;
 	unsigned long flags;
 	int ret;
 

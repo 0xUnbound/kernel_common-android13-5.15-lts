@@ -1264,8 +1264,13 @@ static int ieee80211_change_beacon(struct wiphy *wiphy, struct net_device *dev,
 	return 0;
 }
 
+#ifndef CFG80211_PROP_MULTI_LINK_SUPPORT
 static int ieee80211_stop_ap(struct wiphy *wiphy, struct net_device *dev,
 			     unsigned int link_id)
+#else /* CFG80211_PROP_MULTI_LINK_SUPPORT */
+static int ieee80211_stop_ap(struct wiphy *wiphy, struct net_device *dev,
+			     struct cfg80211_ap_settings *settings)
+#endif /* CFG80211_PROP_MULTI_LINK_SUPPORT */
 {
 	struct ieee80211_sub_if_data *sdata = IEEE80211_DEV_TO_SUB_IF(dev);
 	struct ieee80211_sub_if_data *vlan;
@@ -1652,12 +1657,12 @@ static int sta_apply_parameters(struct ieee80211_local *local,
 		sta->listen_interval = params->listen_interval;
 
 	if (params->link_sta_params.supported_rates &&
-	    params->link_sta_params.supported_rates_len &&
-	    !ieee80211_parse_bitrates(&sdata->vif.bss_conf.chandef,
-				      sband, params->link_sta_params.supported_rates,
-				      params->link_sta_params.supported_rates_len,
-				      &sta->sta.supp_rates[sband->band]))
-		return -EINVAL;
+	    params->link_sta_params.supported_rates_len) {
+		ieee80211_parse_bitrates(&sdata->vif.bss_conf.chandef,
+					 sband, params->link_sta_params.supported_rates,
+					 params->link_sta_params.supported_rates_len,
+					 &sta->sta.supp_rates[sband->band]);
+	}
 
 	if (params->link_sta_params.ht_capa)
 		ieee80211_ht_cap_ie_to_sta_ht_cap(sdata, sband,

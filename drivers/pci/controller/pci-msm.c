@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /* Copyright (c) 2014-2021, The Linux Foundation. All rights reserved.*/
+/* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries. */
 
 #include <dt-bindings/regulator/qcom,rpmh-regulator-levels.h>
 #include <linux/aer.h>
@@ -942,7 +943,8 @@ struct pcie_i2c_ctrl {
 };
 
 enum i2c_client_id {
-	I2C_CLIENT_ID_NTN3,
+	I2C_CLIENT_ID_INVALID = 0xff,
+	I2C_CLIENT_ID_NTN3 = 0,
 	I2C_CLIENT_ID_MAX,
 };
 
@@ -8301,11 +8303,9 @@ void msm_pcie_allow_l1(struct pci_dev *pci_dev)
 		return;
 	}
 
+	msm_pcie_config_l1_enable_all(pcie_dev);
+
 	msm_pcie_write_mask(pcie_dev->parf + PCIE20_PARF_PM_CTRL, BIT(5), 0);
-	/* enable L1 */
-	msm_pcie_write_mask(pcie_dev->dm_core +
-				(root_pci_dev->pcie_cap + PCI_EXP_LNKCTL),
-				0, PCI_EXP_LNKCTL_ASPM_L1);
 
 	PCIE_DBG2(pcie_dev, "PCIe: RC%d: %02x:%02x.%01x: exit\n",
 		pcie_dev->rc_idx, pci_dev->bus->number,
@@ -8318,6 +8318,7 @@ int msm_pcie_prevent_l1(struct pci_dev *pci_dev)
 {
 	struct pci_dev *root_pci_dev;
 	struct msm_pcie_dev_t *pcie_dev;
+	struct pci_bus *bus;
 	u32 cnt = 0;
 	u32 cnt_max = 1000; /* 100ms timeout */
 	int ret = 0;
@@ -8327,6 +8328,7 @@ int msm_pcie_prevent_l1(struct pci_dev *pci_dev)
 		return -ENODEV;
 
 	pcie_dev = PCIE_BUS_PRIV_DATA(root_pci_dev->bus);
+	bus = pcie_dev->dev->bus;
 
 	/* disable L1 */
 	mutex_lock(&pcie_dev->aspm_lock);
@@ -8347,9 +8349,6 @@ int msm_pcie_prevent_l1(struct pci_dev *pci_dev)
 		return 0;
 	}
 
-	msm_pcie_write_mask(pcie_dev->dm_core +
-				(root_pci_dev->pcie_cap + PCI_EXP_LNKCTL),
-				PCI_EXP_LNKCTL_ASPM_L1, 0);
 	msm_pcie_write_mask(pcie_dev->parf + PCIE20_PARF_PM_CTRL, 0, BIT(5));
 
 	/* confirm link is in L0/L0s */
@@ -8375,6 +8374,8 @@ int msm_pcie_prevent_l1(struct pci_dev *pci_dev)
 
 		usleep_range(100, 105);
 	}
+
+	msm_pcie_config_l1_disable_all(pcie_dev, bus);
 
 	PCIE_DBG2(pcie_dev, "PCIe: RC%d: %02x:%02x.%01x: exit\n",
 		pcie_dev->rc_idx, pci_dev->bus->number,
@@ -9190,7 +9191,7 @@ static int pcie_i2c_ctrl_probe(struct i2c_client *client,
 				    const struct i2c_device_id *id)
 {
 	int rc_index = -EINVAL;
-	enum i2c_client_id client_id;
+	enum i2c_client_id client_id = I2C_CLIENT_ID_INVALID;
 	struct pcie_i2c_ctrl *i2c_ctrl;
 	const struct of_device_id *match;
 	struct i2c_driver_data *data;
@@ -10319,6 +10320,10 @@ int msm_pcie_deregister_event(struct msm_pcie_register_event *reg)
 	return -EINVAL;
 }
 EXPORT_SYMBOL(msm_pcie_deregister_event);
+
+#ifdef CONFIG_I2C
+MODULE_SOFTDEP("pre: i2c_msm_geni");
+#endif
 
 MODULE_DESCRIPTION("Qualcomm Technologies, Inc. PCIe RC driver");
 MODULE_LICENSE("GPL v2");

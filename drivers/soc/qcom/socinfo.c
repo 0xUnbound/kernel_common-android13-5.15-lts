@@ -2,7 +2,7 @@
 /*
  * Copyright (c) 2009-2017, 2021 The Linux Foundation. All rights reserved.
  * Copyright (c) 2017-2019, Linaro Ltd.
- * Copyright (c) 2022-2024, Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
 #include <linux/debugfs.h>
@@ -218,6 +218,25 @@ static const char * const hw_platform_feature_code[] = {
 	[SOCINFO_FC_AF] = "AF",
 	[SOCINFO_FC_AG] = "AG",
 	[SOCINFO_FC_AH] = "AH",
+};
+
+static const char * const hw_platform_wfeature_code[] = {
+	[SOCINFO_FC_W0 - SOCINFO_FC_W0] = "W0",
+	[SOCINFO_FC_W1 - SOCINFO_FC_W0] = "W1",
+	[SOCINFO_FC_W2 - SOCINFO_FC_W0] = "W2",
+	[SOCINFO_FC_W3 - SOCINFO_FC_W0] = "W3",
+	[SOCINFO_FC_W4 - SOCINFO_FC_W0] = "W4",
+	[SOCINFO_FC_W5 - SOCINFO_FC_W0] = "W5",
+	[SOCINFO_FC_W6 - SOCINFO_FC_W0] = "W6",
+	[SOCINFO_FC_W7 - SOCINFO_FC_W0] = "W7",
+	[SOCINFO_FC_W8 - SOCINFO_FC_W0] = "W8",
+	[SOCINFO_FC_W9 - SOCINFO_FC_W0] = "W9",
+	[SOCINFO_FC_WA - SOCINFO_FC_W0] = "WA",
+	[SOCINFO_FC_WB - SOCINFO_FC_W0] = "WB",
+	[SOCINFO_FC_WC - SOCINFO_FC_W0] = "WC",
+	[SOCINFO_FC_WD - SOCINFO_FC_W0] = "WD",
+	[SOCINFO_FC_WE - SOCINFO_FC_W0] = "WE",
+	[SOCINFO_FC_WF - SOCINFO_FC_W0] = "WF",
 };
 
 static const char * const hw_platform_ifeature_code[] = {
@@ -578,6 +597,8 @@ static const char *socinfo_get_feature_code_mapping(void)
 
 	if (id > SOCINFO_FC_UNKNOWN && id < SOCINFO_FC_EXT_RESERVE)
 		return hw_platform_feature_code[id];
+	else if (id >= SOCINFO_FC_W0 && id < SOCINFO_FC_SUBPART_RESERVE)
+		return hw_platform_wfeature_code[id - SOCINFO_FC_W0];
 	else if (id >= SOCINFO_FC_Y0 && id < SOCINFO_FC_INT_RESERVE)
 		return hw_platform_ifeature_code[id - SOCINFO_FC_Y0];
 
@@ -1211,6 +1232,7 @@ static const struct soc_id soc_id[] = {
 	{ 422, "IPQ6010" },
 	{ 425, "SC7180" },
 	{ 441, "QM_SCUBA" },
+	{ 445, "SM6115P" },
 	{ 453, "IPQ6005" },
 	{ 455, "QRB5165" },
 	{ 457, "WAIPIO" },
@@ -1259,7 +1281,12 @@ static const struct soc_id soc_id[] = {
 	{ 606, "MONACOAU_IVI"},
 	{ 607, "MONACOAU_SRV1L"},
 	{ 608, "CROW" },
+	{ 621, "QWM2290" },
+	{ 622, "QWS2290" },
 	{ 644, "CROW_LTE" },
+	{ 668, "QCS_KALAMAP_N"},
+	{ 687, "CROWP" },
+	{ 688, "QCM_KALAMA_N"},
 };
 
 static struct qcom_socinfo *qsocinfo;
@@ -2431,6 +2458,19 @@ static int qcom_socinfo_probe(struct platform_device *pdev)
 		if (!qs->attr.serial_number)
 			return -ENOMEM;
 	}
+
+	if (socinfo_format >= SOCINFO_VERSION(0, 16)) {
+		socinfo_enumerate_partinfo_details();
+		machine = socinfo_machine(&pdev->dev, le32_to_cpu(info->id));
+		fc = socinfo_get_feature_code_mapping();
+		sku = devm_kasprintf(&pdev->dev, GFP_KERNEL, "%s-%u-%s",
+			machine, socinfo_get_pcode_id(), fc);
+	}
+
+	qsocinfo = qs;
+	init_rwsem(&qs->current_image_rwsem);
+	socinfo_populate_sysfs(qs);
+	socinfo_print();
 
 	qs->soc_dev = soc_device_register(&qs->attr);
 	if (IS_ERR(qs->soc_dev))

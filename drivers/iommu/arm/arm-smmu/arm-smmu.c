@@ -14,7 +14,7 @@
  *	- Context fault reporting
  *	- Extended Stream ID (16 bit)
  *
- * Copyright (c) 2021-2024, Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
 #define pr_fmt(fmt) "arm-smmu: " fmt
@@ -1651,6 +1651,14 @@ static int arm_smmu_init_domain_context(struct iommu_domain *domain,
 	 */
 	if (smmu_domain->mapping_cfg.atomic) {
 		smmu_domain->rpm_always_on = true;
+		/* During device shutdown, if non atomic client is doing the register
+		 * space access, it experiencing the unclocked access error becaue of
+		 * force suspend from the device remove path, to avoid such case
+		 * adding smmu atomic refcount, to know is there any atomic client or
+		 * not, if there is no atomic client it will skip the force suspend and
+		 * power off.
+		 */
+		smmu->atomic_pwr_refcount++;
 		arm_smmu_rpm_get(smmu);
 	}
 
@@ -1731,8 +1739,10 @@ static void arm_smmu_destroy_domain_context(struct iommu_domain *domain)
 	 * Matches with call to arm_smmu_rpm_get in
 	 * arm_smmu_init_domain_contxt.
 	 */
-	if (smmu_domain->rpm_always_on)
+	if (smmu_domain->rpm_always_on) {
+		smmu->atomic_pwr_refcount--;
 		arm_smmu_rpm_put(smmu);
+	}
 
 	/*
 	 * Disable the context bank and free the page tables before freeing
@@ -3499,7 +3509,7 @@ static int arm_smmu_device_cfg_probe(struct arm_smmu_device *smmu)
 
 	ret = of_property_read_u32(smmu->dev->of_node, "qcom,num-smr-override",
 		&num_mapping_groups_override);
-	if (!ret && size != num_mapping_groups_override) {
+	if (!ret && size > num_mapping_groups_override) {
 		dev_dbg(smmu->dev, "%d mapping groups overridden to %d\n",
 			size, num_mapping_groups_override);
 
@@ -3537,7 +3547,7 @@ static int arm_smmu_device_cfg_probe(struct arm_smmu_device *smmu)
 		"qcom,num-context-banks-override",
 		&num_context_banks_override);
 
-	if (!ret && smmu->num_context_banks != num_context_banks_override) {
+	if (!ret && smmu->num_context_banks > num_context_banks_override) {
 		dev_dbg(smmu->dev, "%d context banks overridden to %d\n",
 			smmu->num_context_banks,
 			num_context_banks_override);
@@ -4035,16 +4045,19 @@ static int arm_smmu_device_remove(struct platform_device *pdev)
 	arm_smmu_gr0_write(smmu, ARM_SMMU_GR0_sCR0, ARM_SMMU_sCR0_CLIENTPD);
 	arm_smmu_rpm_put(smmu);
 
-	if (pm_runtime_enabled(smmu->dev))
-		pm_runtime_force_suspend(smmu->dev);
-	else
-		arm_smmu_power_off(smmu, smmu->pwr);
-
+	if (smmu->atomic_pwr_refcount > 0) {
+		if (pm_runtime_enabled(smmu->dev))
+			pm_runtime_force_suspend(smmu->dev);
+		else
+			arm_smmu_power_off(smmu, smmu->pwr);
+	}
 	return 0;
 }
 
 static void arm_smmu_device_shutdown(struct platform_device *pdev)
 {
+	if (!strcmp(dev_name(&pdev->dev), "59a0000.kgsl-smmu"))
+		return;
 	arm_smmu_device_remove(pdev);
 }
 

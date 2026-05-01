@@ -777,6 +777,7 @@ MODULE_DEVICE_TABLE(spi, spidev_spi_ids);
  * spidev should never be referenced in DT without a specific compatible string,
  * it is a Linux implementation thing rather than a description of the hardware.
  */
+
 static int spidev_of_check(struct device *dev)
 {
 	if (device_property_match_string(dev, "compatible", "spidev") < 0)

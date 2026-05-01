@@ -21,6 +21,7 @@
 #define MAX_SLV_ID		8
 #define SLAVE_ID_MASK		0x7
 #define SLAVE_ID_SHIFT		16
+#define CMD_DB_STANDALONE_MASK BIT(0)
 #define SLAVE_ID(addr)		FIELD_GET(GENMASK(19, 16), addr)
 #define VRM_ADDR(addr)		FIELD_GET(GENMASK(19, 4), addr)
 

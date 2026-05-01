@@ -256,6 +256,12 @@ void mhi_reg_write_work(struct work_struct *w)
 		if (!mhi_is_active(mhi_cntrl))
 			break;
 
+		/*
+		 * Prevent reordering to ensure updated val and reg_addr values
+		 * are loaded after valid is loaded. This is to prevent stale
+		 * values from being loaded before valid is checked.
+		 */
+		smp_rmb();
 		writel_relaxed(info->val, info->reg_addr);
 		info->valid = false;
 		mhi_priv->read_idx =
@@ -1194,6 +1200,10 @@ static int mhi_init_timesync(struct mhi_controller *mhi_cntrl,
 
 	/* save time_offset for obtaining time via MMIO register reads */
 	mhi_tsync->time_reg = mhi_cntrl->regs + time_offset;
+	mhi_tsync->int_sequence = 0;
+	mhi_tsync->local_time = 0;
+	mhi_tsync->remote_time = 0;
+	mhi_tsync->db_pending = false;
 
 	mutex_init(&mhi_tsync->mutex);
 
@@ -1274,7 +1284,7 @@ int mhi_process_misc_tsync_ev_ring(struct mhi_controller *mhi_cntrl,
 				   struct mhi_event *mhi_event,
 				   u32 event_quota)
 {
-	struct mhi_tre *dev_rp;
+	struct mhi_ring_element *dev_rp;
 	struct mhi_ring *ev_ring = &mhi_event->ring;
 	struct mhi_event_ctxt *er_ctxt =
 		&mhi_cntrl->mhi_ctxt->er_ctxt[mhi_event->er_index];
@@ -1384,7 +1394,7 @@ int mhi_process_misc_bw_ev_ring(struct mhi_controller *mhi_cntrl,
 				struct mhi_event *mhi_event,
 				u32 event_quota)
 {
-	struct mhi_tre *dev_rp;
+	struct mhi_ring_element *dev_rp;
 	struct mhi_ring *ev_ring = &mhi_event->ring;
 	struct mhi_event_ctxt *er_ctxt =
 		&mhi_cntrl->mhi_ctxt->er_ctxt[mhi_event->er_index];

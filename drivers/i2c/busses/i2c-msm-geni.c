@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /*
  * Copyright (c) 2017-2021, The Linux Foundation. All rights reserved.
- * Copyright (c) 2021-2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  */
 
 #include <linux/clk.h>
@@ -269,9 +269,9 @@ struct geni_i2c_clk_fld {
 };
 
 static struct geni_i2c_clk_fld geni_i2c_clk_map[] = {
-	{KHz(100), 7, 10, 11, 26},
-	{KHz(400), 2,  7, 10, 24},
-	{KHz(1000), 1, 3,  9, 18},
+	{KHz(100), 7, 10, 12, 26},
+	{KHz(400), 2,  5, 11, 22},
+	{KHz(1000), 1, 2,  8, 18},
 };
 
 static int geni_i2c_clk_map_idx(struct geni_i2c_dev *gi2c)
@@ -889,8 +889,16 @@ irqret:
 static void gi2c_ev_cb(struct dma_chan *ch, struct msm_gpi_cb const *cb_str,
 		       void *ptr)
 {
-	struct geni_i2c_dev *gi2c = ptr;
-	u32 m_stat = cb_str->status;
+	struct geni_i2c_dev *gi2c;
+	u32 m_stat;
+
+	if (!ptr || !cb_str) {
+		pr_err("%s: Invalid ev_cb buffer\n", __func__);
+		return;
+	}
+
+	gi2c = (struct geni_i2c_dev *)ptr;
+	m_stat = cb_str->status;
 
 	switch (cb_str->cb_event) {
 	case MSM_GPI_QUP_ERROR:
@@ -2662,17 +2670,35 @@ static void geni_i2c_shutdown(struct platform_device *pdev)
 	i2c_mark_adapter_suspended(&gi2c->adap);
 }
 
+/**
+ * geni_i2c_deep_sleep_supported() - Checks whether Deep sleep functionality is supported or not.
+ *
+ * Return: True if deep sleep/quick boot functionality supports otherwise false.
+ */
+
+#ifdef CONFIG_DEEPSLEEP
+static bool geni_i2c_deep_sleep_supported(void)
+{
+	if (pm_suspend_via_firmware())
+		return true;
+
+	return false;
+}
+#else
+static bool geni_i2c_deep_sleep_supported(void)
+{
+	return false;
+}
+#endif
+
 static int geni_i2c_resume_early(struct device *device)
 {
 	struct geni_i2c_dev *gi2c = dev_get_drvdata(device);
 
 	I2C_LOG_DBG(gi2c->ipcl, false, gi2c->dev, "%s ret=%d\n", __func__, true);
-#ifdef CONFIG_DEEPSLEEP
-	if (pm_suspend_via_firmware()) {
+	if (geni_i2c_deep_sleep_supported())
 		gi2c->se_mode = UNINITIALIZED;
-		gi2c->is_deep_sleep = true;
-	}
-#endif
+
 	return 0;
 }
 
@@ -2695,6 +2721,12 @@ static int geni_i2c_gpi_suspend_resume(struct geni_i2c_dev *gi2c, bool is_suspen
 	 */
 	if (gi2c->tx_c) {
 		if (is_suspend) {
+			if (gi2c->is_deep_sleep) {
+				gi2c->tx_ev.cmd = MSM_GPI_DEEP_SLEEP_INIT;
+				I2C_LOG_DBG(gi2c->ipcl, false, gi2c->dev,
+					    "%s: Deep sleep entry\n", __func__);
+			}
+
 			tx_ret = dmaengine_pause(gi2c->tx_c);
 		} else {
 			/* For deep sleep need to restore the config similar to the probe,
@@ -2702,8 +2734,11 @@ static int geni_i2c_gpi_suspend_resume(struct geni_i2c_dev *gi2c, bool is_suspen
 			 * do similar to the probe. After this we should set this flag to
 			 * MSM_GPI_DEFAULT, means gpi probe state is restored.
 			 */
-			if (gi2c->is_deep_sleep)
+			if (gi2c->is_deep_sleep) {
 				gi2c->tx_ev.cmd = MSM_GPI_DEEP_SLEEP_INIT;
+				I2C_LOG_DBG(gi2c->ipcl, false, gi2c->dev,
+					    "%s: Deep sleep exit\n", __func__);
+			}
 
 			tx_ret = dmaengine_resume(gi2c->tx_c);
 			if (gi2c->is_deep_sleep) {
@@ -2926,6 +2961,12 @@ static int geni_i2c_suspend_late(struct device *device)
 				"late I2C transaction request\n");
 		return -EBUSY;
 	}
+
+	if (geni_i2c_deep_sleep_supported()) {
+		gi2c->is_deep_sleep = true;
+		I2C_LOG_DBG(gi2c->ipcl, false, gi2c->dev, "%s:Deep Sleep Entry\n", __func__);
+	}
+
 	if (!pm_runtime_status_suspended(device)) {
 		I2C_LOG_DBG(gi2c->ipcl, false, gi2c->dev,
 			"%s: Force suspend\n", __func__);

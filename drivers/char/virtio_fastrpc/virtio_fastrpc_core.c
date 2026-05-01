@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /*
  * Copyright (c) 2021, The Linux Foundation. All rights reserved.
- * Copyright (c) 2022-2024, Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2022-2025, Qualcomm Innovation Center, Inc. All rights reserved.
  */
 #include <linux/ion.h>
 #include <linux/sched.h>
@@ -826,16 +826,21 @@ static int get_args(struct vfastrpc_invoke_ctx *ctx)
 			attrs[i] &= ~FASTRPC_ATTR_KEEP_MAP;
 			err = vfastrpc_mmap_create(vfl, fds[i], attrs[i],
 					0, 0, dmaflags, &maps[i]);
-			if (!err && maps[i])
-				maps[i]->ctx_refs++;
 			if (err) {
 				for (j = bufs; j < i; j++) {
-					if (maps[j] && maps[j]->ctx_refs)
-						maps[j]->ctx_refs--;
-					vfastrpc_mmap_free(vfl, maps[j], 0);
+					if (maps[j] && maps[j]->dma_handle_refs) {
+						maps[j]->dma_handle_refs--;
+						vfastrpc_mmap_free(vfl, maps[j], 0);
+					}
 				}
 				mutex_unlock(&fl->map_mutex);
 				goto bail;
+			} else if (maps[i]) {
+				/*
+				 * Increment  refs count for in/out handle if map created
+				 * and no error, indicate map under use in remote call
+				 */
+				maps[i]->dma_handle_refs++;
 			}
 			handlelen += SIZE_OF_MAPPING(maps[i]->table->nents);
 		}
@@ -1157,9 +1162,10 @@ static int put_args(struct vfastrpc_invoke_ctx *ctx)
 			break;
 		if (!vfastrpc_mmap_find(vfl, (int)fdlist[i], 0, 0,
 					0, 0, &mmap)) {
-			if (mmap && mmap->ctx_refs)
-				mmap->ctx_refs--;
-			vfastrpc_mmap_free(vfl, mmap, 0);
+			if (mmap && mmap->dma_handle_refs) {
+				mmap->dma_handle_refs = 0;
+				vfastrpc_mmap_free(vfl, mmap, 0);
+			}
 		}
 	}
 	mutex_unlock(&fl->map_mutex);
@@ -1316,6 +1322,8 @@ bail:
 					ctx->perf, M_KERNEL_PERF_LIST*sizeof(uint64_t));
 		lseq_num = ctx->seq_num;
 		context_free(ctx);
+		if (fl->profile)
+			perf_counter = NULL;
 		trace_fastrpc_internal_invoke_end(invoke->handle, invoke->sc, lseq_num);
 	}
 
