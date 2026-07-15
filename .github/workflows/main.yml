@@ -1,0 +1,28 @@
+name: Build Ecstasy Kernel with Modules
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  build-kernel:
+    name: Build Kernel & Modules
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Kernel
+        uses: dabao1955/kernel_build_action@main
+        with:
+        
+          kernel-url: https://github.com/0xUnbound/kernel_common-android13-5.15-lts
+          kernel-branch: r34
+          
+       
+          config: gki_defconfig
+          arch: arm64
+          
+        
+          aosp-clang: true
+          android-version: 13
+          aosp-gcc: true
+
+       
+          anykernel3: true
