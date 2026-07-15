@@ -23,7 +23,8 @@ jobs:
           aosp-clang: false
           clang-url: https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r450784d.tar.gz
           android-version: 13
-          aosp-gcc: true
+          aosp-gcc: false
+          extra-make-args: LLVM=1 LLVM_IAS=1
 
        
           anykernel3: true
