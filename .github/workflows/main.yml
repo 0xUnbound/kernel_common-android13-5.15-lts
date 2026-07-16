@@ -32,7 +32,21 @@ jobs:
           clang-url: https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r450784d.tar.gz
           android-version: 13
           aosp-gcc: false
-          extra-make-args: LLVM=1 LLVM_IAS=1
+          extra-make-args: LLVM=1 LLVM_IAS=1 modules
 
        
-          anykernel3: true
+          anykernel3: false
+
+          name: Prepare Modules Artifact
+          run: |
+           mkdir -p out/modules_export
+           find . -name "*.ko" -exec cp {} out/modules_export/ \;
+           echo "Скомпилированные модули:"
+           ls -la out/modules_export/
+
+      # 4. Выгружаем чистый архив с модулями
+      - name: Upload RT3070 Modules
+        uses: actions/upload-artifact@v4
+        with:
+          name: rt3070_modules_only
+          path: out/modules_export/
