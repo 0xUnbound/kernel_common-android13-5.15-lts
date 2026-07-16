@@ -8,6 +8,14 @@ jobs:
     name: Build Kernel & Modules
     runs-on: ubuntu-latest
     steps:
+      - name: Install dependencies & pahole
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dwarves libelf-dev
+          
+
+
+    
       - name: Build Kernel
         uses: dabao1955/kernel_build_action@v1.10.2
         with:
